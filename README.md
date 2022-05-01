@@ -38,7 +38,7 @@ BACKEND_API_URL=http://localhost:3001
 ```
 
 
-**Step 3. Run in development mode** 
+**Step 3. Start Development Server** 
 ``` bash
 yarn dev
 ```
