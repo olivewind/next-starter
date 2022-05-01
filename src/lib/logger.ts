@@ -15,7 +15,17 @@ export const logger = winston.createLogger({
     }),
   ),
   transports: [
-    new winston.transports.Console({}),
+    new winston.transports.Console({
+      format: winston.format.simple(),
+    }),
+  ],
+});
+
+if (
+  process.env.NODE_ENV === 'production' &&
+  process.env.LOG_FILE_PERSISTENCE === '1'
+) {
+  logger.transports.push(
     new winston.transports.DailyRotateFile({
       filename: 'logs/%DATE%.log',
       datePattern: 'YYYY-MM-DD',
@@ -23,5 +33,5 @@ export const logger = winston.createLogger({
       maxSize: '20m',
       maxFiles: '30d',
     }),
-  ],
-});
+  );
+}
