@@ -1,5 +1,4 @@
 import type { GetServerSideProps, NextPage } from 'next';
-import React from 'react';
 import { privatePage } from '@/lib/with-session';
 import { DefaultLayout } from '@/layouts/default';
 

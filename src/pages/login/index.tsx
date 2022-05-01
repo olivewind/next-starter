@@ -1,11 +1,10 @@
-import React from 'react';
 import { Button, Form, Input, Message } from '@arco-design/web-react';
 import type { GetServerSideProps, NextPage } from 'next';
 import { withSessionSsr } from '@/lib/with-session';
-import styles from './index.module.less';
 import { $http } from '@/utils/http';
 import { useRouter } from 'next/router';
 import { $storage } from '@/utils/storage';
+import styles from './index.module.less';
 
 const LoginPage: NextPage = () => {
   const [form] = Form.useForm<ILoginParams>();

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import httpProxyMiddleware from 'next-http-proxy-middleware';
-import { withSessionRoute } from '../../lib/with-session';
+import { withSessionRoute } from '@/lib/with-session';
 import { get, toString } from 'lodash-es';
 
 export default withSessionRoute(
