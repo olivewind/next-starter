@@ -29,7 +29,7 @@ module.exports = withLess(
         },
       ];
     },
-    pageExtensions: ['tsx'],
+    pageExtensions: ['tsx', 'ts'],
     experimental: {
       outputStandalone: true,
     },
