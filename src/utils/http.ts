@@ -28,6 +28,7 @@ function createHttp() {
     (response: AxiosResponse) => response,
     (error: AxiosError) => {
       if (get(error, 'response.status') === 401) {
+        $storage.clear();
         location.href = '/login';
         return Promise.reject(error);
       }
