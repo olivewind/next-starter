@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@arco-design/web-react": "^2.32.1",
-    "ahooks": "^3.3.10",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "iron-session": "^6.1.3",

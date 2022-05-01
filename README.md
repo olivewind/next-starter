@@ -31,6 +31,7 @@ yarn
 
 ```
 # env.local
+LOG_FILE_PERSISTENCE=1
 SESSION_PASSWORD=password-must-be-at-least-32-characters-long
 COOKIE_NAME=NEXT_STARTER
 BACKEND_API_URL=http://localhost:3001

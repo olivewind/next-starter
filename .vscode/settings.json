@@ -47,19 +47,10 @@
       ".htmlhintrc": "json"
     },
     "cSpell.words": [
-      "ahooks",
-      "datagrand",
-      "dockerhub",
       "droplist",
-      "lpush",
-      "okaidia",
       "postbuild",
       "prismjs",
-      "rediss",
       "stylelint",
-      "tailwindcss",
-      "taobao",
-      "tasklists",
       "vercel"
     ],
     "typescript.tsdk": "node_modules/typescript/lib"
