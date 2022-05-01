@@ -37,13 +37,10 @@ COOKIE_NAME=NEXT_STARTER
 BACKEND_API_URL=http://localhost:3001
 ```
 
-
 **Step 3. Start Development Server** 
 ``` bash
 yarn dev
 ```
-
-
 
 ## Deployment
 

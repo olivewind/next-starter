@@ -63,17 +63,18 @@ const LoginPage: NextPage = () => {
 };
 
 export const getServerSideProps: GetServerSideProps = withSessionSsr(
-  async ({ req }) => {
-    const user = !!req.session.user;
+  async ({}) => {
+    // const user = !!req.session.user;
     // you can use the backend API to verify it again
-    if (!!user) {
-      return {
-        redirect: {
-          destination: '/dashboard',
-          permanent: false,
-        },
-      };
-    }
+    // if already logged in, redirect directly
+    // if (!!user) {
+    //   return {
+    //     redirect: {
+    //       destination: '/dashboard',
+    //       permanent: false,
+    //     },
+    //   };
+    // }
     return {
       props: {},
     };
