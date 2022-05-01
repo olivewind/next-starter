@@ -31,20 +31,10 @@ const LoginPage: NextPage = () => {
   return (
     <div className={styles['container']}>
       <Form style={{ width: 500 }} onSubmit={onLogin} form={form}>
-        <Form.Item
-          label="Username"
-          field="username"
-          help={false}
-          rules={[{ required: true }]}
-        >
+        <Form.Item label="Username" field="username" help={false} rules={[{ required: true }]}>
           <Input placeholder="whatever you enter" />
         </Form.Item>
-        <Form.Item
-          label="Password"
-          field="password"
-          help={false}
-          rules={[{ required: true }]}
-        >
+        <Form.Item label="Password" field="password" help={false} rules={[{ required: true }]}>
           <Input.Password placeholder="whatever you enter" />
         </Form.Item>
         <Form.Item
@@ -61,23 +51,21 @@ const LoginPage: NextPage = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = withSessionSsr(
-  async ({}) => {
-    // const user = !!req.session.user;
-    // you can use the backend API to verify it again
-    // if already logged in, redirect directly
-    // if (!!user) {
-    //   return {
-    //     redirect: {
-    //       destination: '/dashboard',
-    //       permanent: false,
-    //     },
-    //   };
-    // }
-    return {
-      props: {},
-    };
-  },
-);
+export const getServerSideProps: GetServerSideProps = withSessionSsr(async ({}) => {
+  // const user = !!req.session.user;
+  // you can use the backend API to verify it again
+  // if already logged in, redirect directly
+  // if (!!user) {
+  //   return {
+  //     redirect: {
+  //       destination: '/dashboard',
+  //       permanent: false,
+  //     },
+  //   };
+  // }
+  return {
+    props: {},
+  };
+});
 
 export default LoginPage;

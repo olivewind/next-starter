@@ -21,10 +21,7 @@ export const logger = winston.createLogger({
   ],
 });
 
-if (
-  process.env.NODE_ENV === 'production' &&
-  process.env.LOG_FILE_PERSISTENCE === '1'
-) {
+if (process.env.NODE_ENV === 'production' && process.env.LOG_FILE_PERSISTENCE === '1') {
   logger.transports.push(
     new winston.transports.DailyRotateFile({
       filename: 'logs/%DATE%.log',
